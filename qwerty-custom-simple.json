@@ -1,13 +1,20 @@
-[[["Q"  , "W"    , "E"        , "R"      , "T"                      , "Y"      , "U"      , "I"    , "O"     , "P"],
-  ["A"  , "S"    , "D"        , "F"      , "G"                      , "H"      , "J"      , "K"    , "L"     , "SEMICOLON"],
-  ["Z"  , "X"    , "C"        , "V"      , "B"                      , "N"      , "M"      , "COMMA", "PERIOD", "SLASH"],
-  ["ESC", "reset", "BACKSPACE", ["fn", 1], ["fn", 2], "TAB", "ENTER", ["fn", 2], ["fn", 1], "MINUS", "QUOTE" , "ESC"]]]
+[[["q"  , "w"    , "e"        , "r"      , "t"                      , "y"      , "u"      , "i"    , "o"     , "p"],
+  ["a"  , "s"    , "d"        , "f"      , "g"                      , "h"      , "j"      , "k"    , "l"     , "SEMICOLON"],
+  ["z"  , "x"    , "c"        , "v"      , "b",              "ENTER", "n"      , "m"      , "COMMA", "PERIOD", "SLASH"],
+  ["ESC", "reset", "BACKSPACE", ["fn", 1], ["fn", 3], "TAB", ["fn", 3], ["fn", 1], "MINUS", "QUOTE" , "ESC"]],
 
+ [[["sft", "1"], ["sft", "2"], ["sft", "LEFT_BRACE"], ["sft", "RIGHT_BRACE"],  ["sft", "BACKSLASH"], ["sft", "MINUS"], "7", "8", "9", ["sft", "8"]],
+   [["sft", "3"], ["sft", "4"], ["sft", "9"], ["sft", "0"], "`", ["sft", "QUOTE"], "4", "5", "6", ["sft", "EQUALS"]],
+  [["sft", "5"], ["sft", "6"], "LEFT_BRACE", "RIGHT_BRACE", "TILDE", "ENTER", ["sft", "7"], "1", "2", "3", "BACKSLASH"],
+  ["ESC", ["fn", 2], "BACKSPACE", ["fn", 1], ["fn", 3], "TAB", ["fn", 3], ["fn", 1], "PERIOD", "0", "EQUAL"]],
+
+ [["HOME", "UP", "END", "INSERT", "PAGE_UP", "UP", "F7", "F8", "F9", "F10"],
+  ["LEFT", "DOWN", "RIGHT", "DELETE", "PAGE_DOWN", "DOWN", "F4", "F5", "F6", "F11"],
+  ["", "", "", "", "", "ALT", "", "F1", "F2", "F3", "F12"],
+  ["ESC", "reset", "BACKSPACE", ["fn", 1], ["fn", 3], "TAB", ["fn", 3], ["fn", 1], "", "reset", "ESC"]]]
 
 /* qwerty-custom-simple.json
 
-   Standard Atreus layout; should also work for Colemak if you do the
-   layout mapping on the OS side, but dvorak requires a different layout
-   file since the punctuation shuffles around; see softdvorak.json.
+   My custom layout.
 
 */
