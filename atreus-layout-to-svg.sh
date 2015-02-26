@@ -29,46 +29,53 @@ function rendercharacters {
   -e 's/"//g' \
   -e 's/\[//g' \
   -e 's/\]//g' \
-  -e 's/,//g' \
-  -e 's/shift1/!/' \
-  -e 's/shift2/@/' \
-  -e 's/shift3/#/' \
-  -e 's/shift4/\$/' \
-  -e 's/shift5/%/' \
-  -e 's/shift6/\^/' \
-  -e 's/shift7/\\\&/' \
-  -e 's/shift8/*/' \
-  -e 's/shift9/(/' \
-  -e 's/shift0/)/' \
-  -e 's/shiftTILDE/~/' \
-  -e 's/shiftMINUS/_/' \
-  -e 's/shiftEQUALS/+/' \
-  -e 's/shiftBACKSLASH/|/' \
-  -e 's/shiftLEFT_BRACE/{/' \
-  -e 's/shiftRIGHT_BRACE/}/' \
+-e 's/,//g' \
+  -e 's/sft1/!/' \
+  -e 's/sft2/@/' \
+  -e 's/sft3/#/' \
+  -e 's/sft4/\$/' \
+  -e 's/sft5/%/' \
+  -e 's/sft6/\^/' \
+  -e 's/sft7/\\\&/' \
+  -e 's/sft8/*/' \
+  -e 's/sft9/(/' \
+  -e 's/sft0/)/' \
+  -e 's/TILDE/~/' \
+  -e 's/sftMINUS/_/' \
+  -e 's/sftEQUALS/+/' \
+  -e 's/sftBACKSLASH/|/' \
+  -e 's/sftLEFT_BRACE/{/' \
+  -e 's/sftRIGHT_BRACE/}/' \
+  -e 's/sftQUOTE/"/' \
+  -e 's/sftINSERT/INS/' \
+  -e 's/SFT/SFT/' \
   -e 's/PAGE_DOWN/PgDn/' \
   -e 's/PAGE_UP/PgUp/' \
-  -e 's/BACKSPACE/← BS/' \
+  -e 's/BACKSPACE/RET/' \
   -e 's/COMMA/,/' \
   -e 's/DELETE/Del/' \
-  -e 's/DOWN/↓/' \
-  -e 's/ENTER/⏎/' \
+  -e 's/DOWN/DWN/' \
   -e 's/EQUAL/=/' \
   -e 's/FN/fn/' \
   -e 's/INSERT/Ins/' \
   -e 's/LEFT_BRACE/[/' \
-  -e 's/LEFT/←/' \
+  -e 's/LEFT/LFT/' \
   -e 's/MINUS/-/' \
   -e 's/PERIOD/./' \
   -e "s/QUOTE/'/" \
   -e 's/RIGHT_BRACE/]/' \
-  -e 's/RIGHT/→/' \
+  -e 's/RIGHT/RGT/' \
   -e 's/SEMICOLON/;/' \
-  -e 's/TILDE/`/' \
-  -e 's/UP/↑/' \
-  -e 's/function/Layer/' \
-  -e 's/BACKSLASH/\\/' \
-  -e 's/SLASH/\\\//'
+  -e 's/BACKQUOTE/\`/' \
+  -e 's/UP/UP/' \
+  -e 's/function/Fn/' \
+  -e 's/fn/Fn/' \
+  -e 's/BACKSLASH/\\\\/' \
+  -e 's/CTRL/CTL/' \
+  -e 's/SLASH/\\\//' \
+  -e 's/ENTER/ENT/'\
+  -e 's/reset/RST/' \
+  -e 's/SPACE/SPC/'
 }
 
 function debuglog {
@@ -82,7 +89,7 @@ layoutfile=$1
 layercount=$(sed -nf remccoms3.sed $layoutfile | jq length )
 htmlfile="$layoutfile.html"
 if [ -e "$htmlfile" ]; then
-  rm "$htmlfile"
+  rm -f "$htmlfile"
 fi
 
 #echo "layercount = $layercount"
@@ -113,8 +120,5 @@ do
     fi
   done
   cat "$layerfile" >> "$htmlfile"
-  rm "$layerfile"
+  rm -f "$layerfile"
 done
-
-
-

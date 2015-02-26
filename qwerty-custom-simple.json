@@ -1,0 +1,13 @@
+[[["Q"  , "W"    , "E"        , "R"      , "T"                      , "Y"      , "U"      , "I"    , "O"     , "P"],
+  ["A"  , "S"    , "D"        , "F"      , "G"                      , "H"      , "J"      , "K"    , "L"     , "SEMICOLON"],
+  ["Z"  , "X"    , "C"        , "V"      , "B"                      , "N"      , "M"      , "COMMA", "PERIOD", "SLASH"],
+  ["ESC", "reset", "BACKSPACE", ["fn", 1], ["fn", 2], "TAB", "ENTER", ["fn", 2], ["fn", 1], "MINUS", "QUOTE" , "ESC"]]]
+
+
+/* qwerty-custom-simple.json
+
+   Standard Atreus layout; should also work for Colemak if you do the
+   layout mapping on the OS side, but dvorak requires a different layout
+   file since the punctuation shuffles around; see softdvorak.json.
+
+*/
